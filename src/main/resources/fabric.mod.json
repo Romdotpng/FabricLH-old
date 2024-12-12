@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "lavahack",
+  "version": "${version}",
+  "name": "LavaHack",
+  "description": "The minecraft utility mod",
+  "authors": [
+    "_kisman_",
+    "CubicLP",
+    "Ai_2473"
+  ],
+  "contact": {
+    "homepage": "",
+    "issues": "",
+    "sources": ""
+  },
+  "license": "The Unlicense",
+  "icon": "assets/lavahack/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "lavahack.client.LavaHack"
+      }
+    ]
+  },
+  "mixins": [
+    "lavahack.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabricloader}",
+    "fabric-api": ">=${fabric_api}",
+    "fabric-language-kotlin": ">=${fabric_language_kotlin}",
+    "minecraft": ">=${minecraft}",
+    "java": ">=${java}"
+  }
+}

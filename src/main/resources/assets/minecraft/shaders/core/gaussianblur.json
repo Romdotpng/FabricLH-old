@@ -1,0 +1,27 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "srcalpha",
+    "dstrgb": "1-srcalpha"
+  },
+  "vertex": "gaussianblur",
+  "fragment": "gaussianblur",
+  "attributes": [
+    "Position",
+    "UV",
+    "Color"
+  ],
+  "samplers": [
+    { "name": "MinecraftSampler" },
+    { "name": "DiffuseSampler" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ], "lh_type": "internal" },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ], "lh_type": "internal" },
+    { "name": "ScreenSize", "type": "float", "count": 2,  "values": [ 1.0, 1.0 ], "lh_type": "internal" },
+    { "name": "radius", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Radius", "lh_type": "float", "lh_number_range": [ 0.0, 50.0 ]},
+    { "name": "dirX", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Direction X", "lh_type": "float", "lh_number_range": [ 0.0, 20.0 ]},
+    { "name": "dirY", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Direction Y", "lh_type": "float", "lh_number_range": [ 0.0, 20.0 ]},
+    { "name": "weights", "type": "float", "count": 256, "values": [ 0.0 ], "lh_type": "internal" }
+  ]
+}

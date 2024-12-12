@@ -1,0 +1,23 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "one",
+    "dstrgb": "zero"
+  },
+  "vertex": "blur_postprocess",
+  "fragment": "blur_postprocess",
+  "attributes": [ "Position" ],
+  "samplers": [
+    { "name": "DiffuseSampler" },
+    { "name": "MinecraftSampler" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ], "lh_type": "internal" },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ], "lh_type": "internal" },
+    { "name": "InSize", "type": "float", "count": 2, "values": [ 1.0, 1.0 ], "lh_type": "internal" },
+    { "name": "OutSize", "type": "float", "count": 2, "values": [ 1.0, 1.0 ], "lh_type": "internal" },
+    { "name": "BlurDirX", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Blur X", "lh_type": "float", "lh_number_range": [ -5.0, 5.0 ] },
+    { "name": "BlurDirY", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Blur Y", "lh_type": "float", "lh_number_range": [ -5.0, 5.0 ] },
+    { "name": "BlurRadius", "type": "float", "count": 1, "values": [ 5.0 ], "lh_display_name": "Blur Radius", "lh_type": "float", "lh_number_range": [ 0.1, 10.0 ] }
+  ]
+}

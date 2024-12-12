@@ -1,0 +1,14 @@
+{
+  "targets": [
+    "bufIn",
+    "bufOut"
+  ],
+  "passes": [
+    {
+      "name": "blur_postprocess",
+      "intarget": "bufIn",
+      "outtarget": "bufOut",
+      "uniforms": []
+    }
+  ]
+}

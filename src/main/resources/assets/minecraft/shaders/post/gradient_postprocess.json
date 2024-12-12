@@ -1,0 +1,14 @@
+{
+  "targets": [
+    "bufIn",
+    "bufOut"
+  ],
+  "passes": [
+    {
+      "name": "gradient_postprocess",
+      "intarget": "bufIn",
+      "outtarget": "bufOut",
+      "uniforms": []
+    }
+  ]
+}

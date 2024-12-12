@@ -1,0 +1,44 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "srcalpha",
+    "dstrgb": "1-srcalpha"
+  },
+  "vertex": "world",
+  "fragment": "gradient",
+  "attributes": [
+    "Position",
+    "Color",
+    "Normal"
+  ],
+  "samplers": [
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ], "lh_type": "internal" },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ], "lh_type": "internal" },
+    { "name": "LineWidth", "type": "float", "count": 1, "values": [ 1.0 ], "lh_type": "internal" },
+    { "name": "ScreenSize", "type": "float", "count": 2,  "values": [ 1.0, 1.0 ], "lh_type": "internal" },
+    { "name": "GameTime", "type": "float", "count": 1, "values": [ 0.0 ], "lh_type": "internal" },
+    { "name": "InSize",  "type": "float", "count": 2, "values": [ 1.0, 1.0 ], "lh_type": "internal" },
+    { "name": "OutSize", "type": "float",  "count": 2, "values": [ 1.0, 1.0 ], "lh_type": "internal" },
+    { "name": "ScreenSize", "type": "float", "count": 2, "values": [ 1.0, 1.0 ], "lh_type": "internal" },
+    { "name": "timeMult", "type": "float", "count": 1, "values": [ 1.0 ], "lh_type": "animation_speed" },
+    { "name": "color1", "type": "float", "count": 4, "values": [ 1.0, 0.0, 0.0, 1.0 ], "lh_display_name": "Color 1", "lh_type": "color" },
+    { "name": "color2", "type": "float", "count": 4, "values": [ 0.0, 0.0, 0.0, 1.0 ], "lh_display_name": "Color 2", "lh_type": "color" },
+    { "name": "color3", "type": "float", "count": 4, "values": [ 1.0, 0.0, 0.0, 1.0 ], "lh_display_name": "Color 3", "lh_type": "color" },
+    { "name": "color4", "type": "float", "count": 4, "values": [ 0.0, 0.0, 0.0, 1.0 ], "lh_display_name": "Color 4", "lh_type": "color" },
+    { "name": "rainbow", "type": "int", "count": 1, "values": [ 1.0 ], "lh_display_name": "Rainbow", "lh_type": "bool" },
+    { "name": "range", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Range", "lh_type": "float", "lh_number_range": [ 0.0, 0.1 ] },
+    { "name": "saturation", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Saturation", "lh_type": "float", "lh_number_range": [ 0.0, 1.0 ] },
+    { "name": "brightness", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Brightness", "lh_type": "float", "lh_number_range": [ 0.0, 1.0 ] },
+    { "name": "applySin", "type": "int", "count": 1, "values": [ 1.0 ], "lh_display_name": "Apply Sin", "lh_type": "bool" },
+    { "name": "customAlpha", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Custom Alpha", "lh_type": "float", "lh_number_range": [ 0.0, 1.0 ] },
+    { "name": "mixAlphas", "type": "int", "count": 1, "values": [ 1.0 ], "lh_display_name": "Mix Alphas", "lh_type": "bool" },
+    { "name": "originalAlpha", "type": "int", "count": 1, "values": [ 0.0 ], "lh_display_name": "Original Alpha", "lh_type": "bool" },
+    { "name": "centred", "type": "int", "count": 1, "values": [ 0.0 ], "lh_display_name": "Centred", "lh_type": "bool" },
+    { "name": "blurRadius", "type": "float", "count": 1, "values": [ 5.0 ], "lh_display_name": "Blur Radius", "lh_type": "float", "lh_number_range": [ 0.0, 10.0 ] },
+    { "name": "blurX", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Blur X", "lh_type": "float", "lh_number_range": [ -5.0, 5.0 ] },
+    { "name": "blurY", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Blur Y", "lh_type": "float", "lh_number_range": [ -5.0, 5.0 ] },
+    { "name": "blurMix", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Blur Mix", "lh_type": "float", "lh_number_range": [ 0.0, 1.0 ] }
+  ]
+}

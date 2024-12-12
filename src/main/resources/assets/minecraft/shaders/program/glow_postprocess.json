@@ -1,0 +1,25 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "srcalpha",
+    "dstrgb": "1-srcalpha"
+  },
+  "vertex": "glow_postprocess",
+  "fragment": "glow_postprocess",
+  "attributes": [
+    "Position"
+  ],
+  "samplers": [
+    { "name": "DiffuseSampler" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ], "lh_type": "internal" },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ], "lh_type": "internal" },
+    { "name": "InSize",  "type": "float", "count": 2, "values": [ 1.0, 1.0 ], "lh_type": "internal" },
+    { "name": "OutSize", "type": "float",  "count": 2, "values": [ 1.0, 1.0 ], "lh_type": "internal" },
+    { "name": "radius", "type": "float", "count": 1, "values": [ 1.0 ], "lh_display_name": "Radius", "lh_type": "int", "lh_number_range": [ 0.0, 50.0 ] },
+    { "name": "divider", "type": "float", "count": 1, "values": [ 140.0 ], "lh_display_name": "Divider", "lh_type": "float", "lh_number_range": [ 0.1, 300.0 ] },
+    { "name": "maxSample", "type": "float", "count": 1, "values": [ 10.0 ], "lh_display_name": "Max Sample", "lh_type": "float", "lh_number_range": [ 0.1, 50.0 ] },
+    { "name": "fill", "type": "int", "count":  1, "values": [ 0.0 ], "lh_display_name": "Fill", "lh_type": "bool" }
+  ]
+}
